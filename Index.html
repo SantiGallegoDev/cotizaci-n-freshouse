@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propuesta | Sistema de gestión de obras de pintura</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { scroll-behavior: smooth; }
+    /* Sombra suave para cards y secciones */
+    .elev { box-shadow: 0 10px 25px -8px rgba(2, 66, 124, .15); }
+    /* Animaciones de entrada */
+    .reveal { opacity: 0; transform: translateY(16px); transition: all .7s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    /* Brillo sutil en CTA */
+    .shine { position: relative; overflow: hidden; }
+    .shine::after {
+      content: ""; position: absolute; top: 0; left: -150%; width: 100%; height: 100%;
+      background: linear-gradient(75deg, transparent, rgba(255,255,255,.45), transparent);
+      transform: skewX(-20deg);
+      animation: pass 3s linear infinite;
+    }
+    @keyframes pass { 0% { left:-150% } 100% { left:150% } }
+    /* Etiquetas */
+    .chip { background: #EEF2FF; color:#1E3A8A; font-weight:600; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Hero -->
+  <header class="bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <div class="inline-flex items-center gap-2 chip text-xs md:text-sm px-3 py-1 rounded-full">
+        <span>Propuesta de Desarrollo</span>
+      </div>
+      <h1 class="reveal mt-4 text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
+        Sistema web integral para la gestión de obras de pintura
+      </h1>
+      <p class="reveal mt-4 text-lg md:text-xl text-gray-700 max-w-3xl">
+        Centraliza tus proyectos en una sola plataforma <strong>simple y clara</strong>, con
+        <strong>datos en tiempo real</strong>, <strong>control de avances</strong>,
+        <strong>costos</strong> e <strong>inventarios</strong>. Funciona en computadores, tablets y celulares.
+      </p>
+      <ul class="reveal mt-6 text-sm md:text-base text-gray-700 flex flex-wrap gap-x-6 gap-y-2">
+        <li>Cliente: <strong>Freshouse SAS</strong></li>
+        <li>Fecha: <strong><!-- puedes poner la fecha aquí -->Agosto 2025</strong></li>
+        <li>Propuesto por: <strong>Santiago Gallego Gil</strong></li>
+      </ul>
+
+      <div class="reveal mt-8 flex flex-wrap items-center gap-3">
+        <a href="#beneficios" class="shine inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold">
+          Ver beneficios inmediatos
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 4.5a1 1 0 0 1 1 1V10h4.5a1 1 0 1 1 0 2H14.5v4.5a1 1 0 1 1-2 0V12H8a1 1 0 1 1 0-2h4.5V5.5a1 1 0 0 1 1-1Z"/></svg>
+        </a>
+        <a href="#inversion" class="inline-flex items-center gap-2 text-blue-800 font-semibold px-4 py-3">
+          Inversión estimada
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pb-20">
+    <!-- Por qué es una necesidad -->
+    <section class="reveal bg-white rounded-2xl elev p-8 -mt-10 md:-mt-12 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">¿Por qué este sistema es una necesidad?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        En la pintura de edificios, <strong>el tiempo y la organización</strong> hacen la diferencia.
+        Esta plataforma permite tener el <strong>control total</strong> de cada obra: medidas, avances,
+        recursos, costos y comunicación con el cliente; todo en un solo lugar, sin perder información.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Integraremos <strong>Microsoft Drive</strong> (que ya pagan), evitando nuevos costos de almacenamiento,
+        con documentos protegidos y fácil acceso para tu equipo y tus clientes.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        El resultado: <strong>menos errores</strong>, <strong>decisiones más rápidas</strong>
+        y <strong>transparencia</strong> en cada etapa. Modernicen su operación sin complicaciones.
+      </p>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="reveal mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Beneficios que sentirán desde el primer mes</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">⏱️ Control de tiempos</h3>
+          <p class="text-gray-700">Planifiquen jornadas, asignen responsables y vean avances diarios.
+            Menos llamadas, más visibilidad.</p>
+        </div>
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">👷 Control de personal</h3>
+          <p class="text-gray-700">Registro claro de cuadrillas, roles y actividades.
+            Cada quién sabe qué hacer y cuándo.</p>
+        </div>
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">💰 Control del dinero</h3>
+          <p class="text-gray-700">Costos por obra e insumo, alertas y seguimiento.
+            Decidan con base en números, no suposiciones.</p>
+        </div>
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">📦 Inventario con costos</h3>
+          <p class="text-gray-700">Materiales y herramientas organizados, reposición a tiempo
+            y compras más inteligentes.</p>
+        </div>
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">📂 Documentos en un clic</h3>
+          <p class="text-gray-700">Planos, reportes y evidencias centralizados en Microsoft Drive,
+            con trazabilidad y acceso seguro.</p>
+        </div>
+        <div class="bg-white rounded-xl elev p-6">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">🤝 Mejor experiencia del cliente</h3>
+          <p class="text-gray-700">Informes claros y notificaciones automáticas.
+            Confianza y transparencia que fidelizan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="reveal bg-white rounded-2xl elev p-8 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">¿Cómo funciona en la práctica?</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-blue-50">
+          <span class="text-3xl font-extrabold text-blue-800">1</span>
+          <h3 class="mt-2 text-lg font-bold text-blue-900">Creamos la obra</h3>
+          <p class="text-gray-700">Cargan medidas, fotos y documentos. Definen fechas y responsables.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-blue-50">
+          <span class="text-3xl font-extrabold text-blue-800">2</span>
+          <h3 class="mt-2 text-lg font-bold text-blue-900">Seguimiento diario</h3>
+          <p class="text-gray-700">Registran avances, consumos de materiales y validaciones.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-blue-50">
+          <span class="text-3xl font-extrabold text-blue-800">3</span>
+          <h3 class="mt-2 text-lg font-bold text-blue-900">Resultados claros</h3>
+          <p class="text-gray-700">Ven costos reales vs. plan, tiempos y reportes listos para el cliente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulos principales -->
+    <section class="reveal mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Módulos y funcionalidades</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl elev">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">🔑 Acceso y roles</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Ingreso con usuario y contraseña.</li>
+            <li>Perfiles: administrador, supervisor, bodega, cliente.</li>
+            <li>Historial de acciones y seguridad de la información.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl elev">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">📊 Gestión de obra</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Registro de medidas y características.</li>
+            <li>Dashboard con avance diario.</li>
+            <li>Notificaciones a clientes y supervisores.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl elev">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">📂 Documental (Microsoft Drive)</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Planos, reportes y evidencias centralizados.</li>
+            <li>Acceso por cliente y por proyecto.</li>
+            <li>Trazabilidad completa de archivos.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl elev">
+          <h3 class="text-lg font-bold text-blue-800 mb-2">📦 Inventario con costos</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Materiales, herramientas y recursos por obra.</li>
+            <li>Costos por insumo y costo total por proyecto.</li>
+            <li>Alertas de reposición y optimización de compras.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roles y permisos (tabla simple y visual) -->
+    <section class="reveal bg-white rounded-2xl elev p-8 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Roles y accesos</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-200 rounded-xl overflow-hidden">
+          <thead class="bg-blue-50">
+            <tr class="text-left text-sm text-blue-900">
+              <th class="px-4 py-3 font-semibold">Rol</th>
+              <th class="px-4 py-3 font-semibold">Qué puede hacer</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 text-sm">
+            <tr>
+              <td class="px-4 py-3 font-semibold">Administrador</td>
+              <td class="px-4 py-3">Crea obras, gestiona usuarios, ve costos e informes completos.</td>
+              <td class="px-4 py-3">Dirección / Coordinación</td>
+            </tr>
+            <tr class="bg-gray-50/50">
+              <td class="px-4 py-3 font-semibold">Supervisor</td>
+              <td class="px-4 py-3">Registra avances, controla tiempos y personal, carga evidencias.</td>
+              <td class="px-4 py-3">Jefes de cuadrilla</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Impacto económico (ROI simple) -->
+    <section class="reveal grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-2xl elev p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Impacto en costos y tiempos</h2>
+        <ul class="text-gray-700 space-y-3">
+          <li>✅ Menos desperdicio de materiales gracias a inventario claro.</li>
+          <li>✅ Menos reprocesos por información perdida.</li>
+          <li>✅ Tiempos de entrega más predecibles.</li>
+          <li>✅ Informes listos para clientes en minutos.</li>
+        </ul>
+        <p class="mt-4 text-sm text-gray-600">*Estos beneficios suelen notarse en el primer mes de uso.</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl text-white p-8">
+        <h3 class="text-xl font-bold mb-2">Ejemplo de retorno</h3>
+        <p class="text-blue-50 mb-4">Si hoy en una obra típica se pierde 5–8% del material por falta de control, una reducción a 2–3% puede pagar el sistema en poco tiempo.</p>
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <div class="bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-extrabold">↓ Desperdicio</div>
+            <div class="text-blue-100 mt-1">Ahorro directo en materiales</div>
+          </div>
+          <div class="bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-extrabold">↓ Retrasos</div>
+            <div class="text-blue-100 mt-1">Mejor planificación y seguimiento</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Caso de uso corto -->
+    <section class="reveal bg-white rounded-2xl elev p-8 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Un día con el sistema</h2>
+      <p class="text-gray-700 leading-relaxed">
+        El supervisor ingresa a la obra “Torre Norte” desde el celular, marca actividades del día y sube fotos.
+        El inventario registra la salida de pintura e insumos. La app muestra el avance al 62%.
+        El cliente recibe un informe con fotos y fecha estimada de finalización. Todos alineados, sin llamadas interminables.
+      </p>
+    </section>
+
+
+    <!-- Preguntas frecuentes -->
+    <section class="reveal bg-white rounded-2xl elev p-8 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Preguntas frecuentes</h2>
+      <div class="space-y-5">
+        <details class="group bg-gray-50 rounded-xl p-5">
+          <summary class="cursor-pointer font-semibold text-blue-900 flex items-center justify-between">
+            ¿Requiere comprar más licencias?
+            <span class="text-gray-500 group-open:rotate-180 transition">&#9660;</span>
+          </summary>
+          <p class="mt-3 text-gray-700">No necesariamente. Usaremos <strong>Microsoft Drive</strong> que ya pagan para documentos. Hosting y dominio se pueden cotizar aparte si hace falta.</p>
+        </details>
+        <details class="group bg-gray-50 rounded-xl p-5">
+          <summary class="cursor-pointer font-semibold text-blue-900 flex items-center justify-between">
+            ¿Necesitamos capacitación?
+            <span class="text-gray-500 group-open:rotate-180 transition">&#9660;</span>
+          </summary>
+          <p class="mt-3 text-gray-700">Sí, se incluye una capacitación inicial simple para que el equipo lo use sin dificultades.</p>
+        </details>
+        <details class="group bg-gray-50 rounded-xl p-5">
+          <summary class="cursor-pointer font-semibold text-blue-900 flex items-center justify-between">
+            ¿Qué tan rápido veremos resultados?
+            <span class="text-gray-500 group-open:rotate-180 transition">&#9660;</span>
+          </summary>
+          <p class="mt-3 text-gray-700">Normalmente en el primer mes: menos desperdicio, mejor control y reportes más claros.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Inversión -->
+    <section id="inversion" class="reveal bg-white rounded-2xl elev p-8 mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Inversión estimada</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Incluye diseño, desarrollo, pruebas, despliegue, capacitación inicial y <strong>1 mes de soporte post-entrega</strong>.
+      </p>
+      <p class="text-4xl font-extrabold text-blue-800 mb-2">$ 4.000.000 COP</p>
+      <p class="text-gray-700">No incluye costos de hosting, dominio o licencias adicionales (si fueran necesarias).
+        La propiedad intelectual del software será de Freshouse SAS.</p>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="reveal text-center">
+      <div class="inline-flex flex-col items-center gap-4 bg-white rounded-2xl elev px-8 py-10">
+        <h3 class="text-2xl md:text-3xl font-bold text-blue-900">¿Listos para ordenar su operación y ganar tiempo?</h3>
+        <p class="text-gray-700 max-w-2xl">
+          Configuramos el sistema a su forma de trabajar, sin tecnicismos.
+          Empezamos por la obra que ustedes elijan para ver resultados rápido.
+        </p>
+        <a href="#"
+           class="shine inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-semibold">
+          Agendar implementación inicial
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 4.5a1 1 0 0 1 1 1V10h4.5a1 1 0 1 1 0 2H14.5v4.5a1 1 0 1 1-2 0V12H8a1 1 0 1 1 0-2h4.5V5.5a1 1 0 0 1 1-1Z"/></svg>
+        </a>
+        <div class="text-sm text-gray-500">Propuesta presentada por <strong>Santiago Gallego Gil</strong> • Para <strong>Freshouse SAS</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-20 bg-blue-950 text-blue-50">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="text-lg font-semibold">Sistema de gestión de obras de pintura</div>
+          <div class="text-blue-200 text-sm">Profesional, claro y orientado a resultados.</div>
+        </div>
+        <div class="text-blue-200 text-sm">
+          © <span id="y"></span> Freshouse SAS — Propuesta por Santiago Gallego Gil
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Efecto reveal al hacer scroll
+    const onScrollReveal = () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9) el.classList.add('in');
+      });
+    };
+    window.addEventListener('scroll', onScrollReveal);
+    window.addEventListener('load', onScrollReveal);
+  </script>
+</body>
+</html>
